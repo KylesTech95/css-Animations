@@ -1,0 +1,144 @@
+/*Root directory for the colors of the circles SVG*/
+/*Remember to remove the "fill: #-----" from the inline HTML emelents before styling.*/
+:root {
+    --red: #E43F3F;
+    --yellow: #E1D031;
+    --blue: #264EDE;
+    --green: #64CEBB;
+    --black: #000;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /*Centering the content on a page*/
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    /*Black: heartBeat like motion with the use of Opacity*/
+    #tint {
+        fill: var(--black);
+        animation-name: appearInOut;
+        animation-iteration-count: infinite;
+        animation-direction: alternate  ;
+        animation-timing-function: ease-in-out;
+        animation-duration: .8s;
+    }
+    @keyframes appearInOut {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    /*I took the original colors out of the SVG fill property within the in-line styling for 
+    each circle. Upon completion, the colors have been entered here from its root attribute.*/
+    #red {
+        fill: var(--red);
+    }
+    #yellow {
+        fill: var(--yellow);
+    }
+    #green {
+        fill: var(--green);
+    }
+    #blue {
+        fill: var(--blue);
+    }
+    
+    /*Keyframe animation of all circles fading in and out with the opacity property.
+    Feel free to use the from & to declaration statements.*/
+    #light,
+    #dark {
+        animation: fadeInOut 3s ease-in infinite alternate;
+    }
+    @keyframes fadeInOut {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: .5;
+        }
+        100% {
+            opacity: 0;
+        }
+    
+        /*
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        */
+    }
+    
+    /*Each color below has its own individual keyframe animation to specify each circle's translation direction*/
+    #red {
+        animation: topLeft 2s ease-in-out infinite alternate;
+    }
+    @keyframes topLeft {
+        from {
+            transform: translate(-100px, -100px);
+        }
+        to {
+            transform: translate(100px, 100px);
+        }
+    }
+    #green {
+        animation: topRight 2s ease-in-out infinite alternate;
+    }
+    @keyframes topRight {
+        from {
+            transform: translate(100px, -100px);
+        
+        }
+        to {
+            transform: translate(-100px, 100px);
+            }
+    }
+    #blue {
+        animation: bottomLeft 2s ease-in-out infinite alternate;
+    }
+    @keyframes bottomLeft {
+        from {
+            transform: translate(-100px, 100px);
+        }
+        to {
+            transform: translate(100px, -100px);
+        }
+    }
+    #yellow {
+        animation: bottomRight 2s ease-in-out infinite alternate;
+    }
+    @keyframes bottomRight {
+        from {
+            transform: translate(100px, 100px);
+        }
+        to {
+            transform: translate(-100px, -100px);
+    
+        }
+    }
+    
+    /*Below is an animation-delay property that allos the elemets to start 200ms after another. 
+    As you view the HTML, notice each color's style with the "--color-order" property along with it's value.
+    The calc function allows each color to start from red to yellow to blue and lastly green.*/
+    
+    /*I included a similar function below, but with different timing. Feel free to mess around with this. :)*/
+    #red,
+    #yellow,
+    #green,
+    #blue {
+        animation-delay: calc(var(--color-order) * 200ms);
+        /*animation-delay: calc(var(--color-order) * 1s);*/
+    }

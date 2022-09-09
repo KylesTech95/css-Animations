@@ -1,0 +1,44 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    height: 500px;
+    width: 500px;
+    background: red;
+    /*Clip Path Property Linking the SVG below to the box by its 'ID'*/
+    clip-path: url(#clipPath);
+    /*Animation and keyFrame for the box*/
+    animation: changeColors 5s alternate infinite 1s;
+}
+
+@keyframes changeColors {
+
+    0% {
+        background-color: red;
+    }
+    20% {
+        background-color: orange;
+        transform: translate(300px, 300px);
+    }
+    40% {
+        background-color: yellow;
+        transform: translate(300px, -300px);
+    }
+    60% {
+        background-color: green;
+        transform: translate(-300px, 300px);
+    }
+    80% {
+        background-color: blue;
+        transform: translate(-300px, -300px);
+    }
+    100% {
+        background-color: violet;
+        transform: translate(0, 0);
+    }
+}

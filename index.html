@@ -6,6 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clipPath</title>
 </head>
+<style>
+.top {
+    animation: moveLeft 10s alternate infinite;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translate(0, 0);
+}
+    50% {
+        transform: translate(-75px, 0);
+}
+    75% {
+        transform: translate(0, 0);
+}
+    100% {
+        transform: translate(75px, 0);
+}
+    
+}
+.left {
+    animation: moveDown 10s ease-out alternate infinite;
+}
+@keyframes moveDown {
+    0% {
+        transform: translate(0, 0);
+}
+    50% {
+        transform: translate(0, 75px);
+}
+    75% {
+        transform: translate(0, 0);
+}
+    100% {
+        transform: translate(0, -75px);
+}
+    
+}
+.bottom {
+    animation: moveRight 10s ease-out alternate infinite;
+}
+@keyframes moveRight {
+    0% {
+        transform: translate(0, 0);
+}
+    50% {
+        transform: translate(75px, 0);
+}
+    75% {
+        transform: translate(0, 0);
+}
+    100% {
+        transform: translate(-75px, 0);
+}
+    
+}
+.right {
+    animation: moveUp 10s ease-out alternate infinite;
+}
+@keyframes moveUp {
+    0% {
+        transform: translate(0, 0);
+}
+    50% {
+        transform: translate(0, -75px);
+}
+    75% {
+        transform: translate(0, 0);
+}
+    100% {
+        transform: translate(0, 75px);
+}
+    
+}
+
+</style>
 <body width="100%" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     
 
@@ -39,66 +114,66 @@ stroke-width="3" fill="none" />
 <path id="middleCD" d="M 300 300  l 150 0" stroke="orangeRed"
 stroke-width="3" fill="none" />
 <!--purple-path-->
-<path id="middleCD" d="M 300 300  l 0 -150" stroke="purple"
+<path id="middleDA" d="M 300 300  l 0 -150" stroke="purple"
 stroke-width="3" fill="none" />
 
 
 
 <!--SMALL BOX PORTIONS TOP-LEFT -->
 <!--cyan-path-->
-<path d="M 225 225  l 0 -75" stroke="cyan"
+<path class="top" d="M 225 225  l 0 -75" stroke="cyan"
 stroke-width="3" fill="none" />  
 <!--brown-path-->
-<path d="M 225 225  h -75" stroke="brown"
+<path class="left" d="M 225 225  h -75" stroke="brown"
 stroke-width="3" fill="none" />  
 <!--yellow-path-->
-<path d="M 225 225  l 0 75" stroke="yellow"
+<path class="bottom" d="M 225 225  l 0 75" stroke="yellow"
 stroke-width="3" fill="none" />  
 <!--tan-path-->
-<path d="M 225 225  l 75 0" stroke="tan"
+<path class="right" d="M 225 225  l 75 0" stroke="tan"
 stroke-width="3" fill="none" />  
 
 <!--SMALL BOX PORTIONS TOP-RIGHT-->
 <!--cyan-path-->
-<path d="M 375 225  l -75 0" stroke="cyan"
+<path class="left" d="M 375 225  l -75 0" stroke="cyan"
 stroke-width="3" fill="none" />  
 <!--brown-path-->
-<path d="M 375 225  l 0 75" stroke="brown"
+<path class="bottom" d="M 375 225  l 0 75" stroke="brown"
 stroke-width="3" fill="none" />  
 <!--yellow-path-->
-<path d="M 375 225  h 75" stroke="yellow"
+<path class="right" d="M 375 225  h 75" stroke="yellow"
 stroke-width="3" fill="none" />  
 <!--tan-path-->
-<path d="M 375 225  l 0 -75" stroke="tan"
+<path class="top" d="M 375 225  l 0 -75" stroke="tan"
 stroke-width="3" fill="none" />
 
 <!--SMALL BOX PORTIONS BOTTOM-RIGHT-->
 <!--cyan-path-->
-<path d="M 375 375  v 75" stroke="cyan"
+<path class="bottom" d="M 375 375  v 75" stroke="cyan"
 stroke-width="3" fill="none" />  
 <!--brown-path-->
-<path d="M 375 375 h 75" stroke="brown"
+<path class="right" d="M 375 375 h 75" stroke="brown"
 stroke-width="3" fill="none" />
 <!--yellow-path-->
-<path d="M 375 375  l 0 -75" stroke="yellow"
+<path class="top" d="M 375 375  l 0 -75" stroke="yellow"
 stroke-width="3" fill="none" />  
 <!--tan-path-->
-<path d="M 375 375 l -75 0" stroke="tan"
+<path class="left" d="M 375 375 l -75 0" stroke="tan"
 stroke-width="3" fill="none" />
 
 
 <!--SMALL BOX PORTIONS BOTTOM-LEFT-->
 <!--cyan-path-->
-<path d="M 225 375  l 75 0" stroke="cyan"
+<path class="right" d="M 225 375  l 75 0" stroke="cyan"
 stroke-width="3" fill="none" />  
 <!--brown-path-->
-<path d="M 225 375  l 0 -75" stroke="brown"
+<path class="top" d="M 225 375  l 0 -75" stroke="brown"
 stroke-width="3" fill="none" />  
 <!--yellow-path-->
-<path d="M 225 375  l -75 0" stroke="yellow"
+<path class="left" d="M 225 375  l -75 0" stroke="yellow"
 stroke-width="3" fill="none" />  
 <!--tan-path-->
-<path d="M 225 375  l 0 75" stroke="tan"
+<path class="bottom" d="M 225 375  l 0 75" stroke="tan"
 stroke-width="3" fill="none" />  
 
 </svg>

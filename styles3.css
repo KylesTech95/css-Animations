@@ -13,7 +13,6 @@ text-decoration: none;
 color: #fff;
 font-family: chakra petch, sans serif;
 font-size: 35px;
-letter-spacing: 4px;
 text-transform: uppercase;
 width: 250px;
 transition: .5s;
@@ -28,25 +27,14 @@ color: #123;
 @keyframes glow {
   0% {
 text-shadow: 0 0 1px #00ff91, 0 0 3px #00ff91, 0 0 5px #00ff91;
+letter-spacing: 4px;
+
 }
  100% {
 text-shadow: 0 0 10px #00ff91, 0 0 12px #00ff91, 0 0 14px #00ff91;
 font-size: 40px;
+letter-spacing: 8px;
 }
-/* 40% {
-text-shadow: 0 0 1p7x #00ff91, 0 0 19px #00ff91, 0 0 21px #00ff91;
-}
- 60% {
-text-shadow: 0 0 22px #00ff91, 0 0 23px #00ff91, 0 0 25px #00ff91;
-}
- 80% {
-text-shadow: 0 0 27px #00ff91, 0 0 29px #00ff91, 0 0 31px #00ff91;
-}
- 100% {
-text-shadow: 0 0 33px #00ff91, 0 0 35px #00ff91, 0 0 37px #00ff91;
-color: #;
-}*/
-
 }
 
 .bg-container {

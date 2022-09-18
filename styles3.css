@@ -58,7 +58,6 @@ background-color: #9500ff;
 z-index: 999;
 animation: 1s bgGlow linear alternate infinite;
 overflow: hidden;
-border: 1px solid green;
 }
 @keyframes bgGlow {
   0% {

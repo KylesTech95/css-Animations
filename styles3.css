@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+body {
+background: #123;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+a {
+text-decoration: none;
+color: #fff;
+font-family: chakra petch, sans serif;
+font-size: 35px;
+letter-spacing: 4px;
+text-transform: uppercase;
+width: 250px;
+transition: .5s;
+text-align: center;
+z-index: 999;
+}
+a:hover {
+animation: glow .5s linear alternate infinite; 
+color: #123;
+
+}
+@keyframes glow {
+  0% {
+text-shadow: 0 0 1px #00ff91, 0 0 3px #00ff91, 0 0 5px #00ff91;
+}
+ 100% {
+text-shadow: 0 0 10px #00ff91, 0 0 12px #00ff91, 0 0 14px #00ff91;
+font-size: 40px;
+}
+/* 40% {
+text-shadow: 0 0 1p7x #00ff91, 0 0 19px #00ff91, 0 0 21px #00ff91;
+}
+ 60% {
+text-shadow: 0 0 22px #00ff91, 0 0 23px #00ff91, 0 0 25px #00ff91;
+}
+ 80% {
+text-shadow: 0 0 27px #00ff91, 0 0 29px #00ff91, 0 0 31px #00ff91;
+}
+ 100% {
+text-shadow: 0 0 33px #00ff91, 0 0 35px #00ff91, 0 0 37px #00ff91;
+color: #;
+}*/
+
+}
+
+.bg-container {
+position: absolute;
+width: 100px;
+padding: 30px 45px;
+color: red;
+background-color: #9500ff;
+z-index: 999;
+animation: 1s bgGlow linear alternate infinite;
+}
+@keyframes bgGlow {
+  0% {
+box-shadow: 0 0 5px #9500ff, 0 0 10px #ee00ff, 0 0 15px #9500ff;
+}
+  100% {
+box-shadow: 0 0 10px #9500ff, 0 0 20px #ee00ff, 0 0 30px #9500ff;
+background-color: #ee00ff;
+}
+
+
+}
